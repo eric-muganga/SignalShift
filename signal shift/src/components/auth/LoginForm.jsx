@@ -5,12 +5,13 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Typography,
-  Input,
   Checkbox,
-  Button,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
+
+import Input from "../common/Input";
+import Button from "../common/Button";
 
 function LoginForm() {
   // initial state for the from
@@ -59,7 +60,6 @@ function LoginForm() {
             placeholder="name@mail.com"
             value={userDetails.email}
             onChange={handleChange}
-            required
           />
           <Input
             type="password"
@@ -68,7 +68,6 @@ function LoginForm() {
             label="Password"
             value={userDetails.password}
             onChange={handleChange}
-            required
           />
           <div className="-ml-2.5">
             <Checkbox color="indigo" label="Remember Me" />
@@ -79,15 +78,10 @@ function LoginForm() {
           <Typography variant="small" className="mt-3 flex justify-center">
             Don&apos;t have an account?
             {/* to add a link to the LoginForm once the user has an account */}
-            <Typography
-              as="a"
-              href="#signup"
-              variant="small"
-              color="blue-gray"
-              className="ml-1 font-bold"
-            >
+            <Link to="signUp" className="ml-1 font-bold">
+              {" "}
               Sign up
-            </Typography>
+            </Link>
           </Typography>
         </CardBody>
       </form>

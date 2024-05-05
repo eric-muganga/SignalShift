@@ -1,14 +1,17 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 import {
-  Input,
-  Button,
   Card,
   CardBody,
   CardHeader,
   Typography,
 } from "@material-tailwind/react";
+
+import Input from "../common/Input";
+import Button from "../common/Button";
 
 function SignupForm() {
   // initial state for the from
@@ -69,7 +72,6 @@ function SignupForm() {
             placeholder="name@mail.com"
             value={userDetails.email}
             onChange={handleChange}
-            required
           />
           <Input
             type="password"
@@ -78,23 +80,14 @@ function SignupForm() {
             label="Password"
             value={userDetails.password}
             onChange={handleChange}
-            required
           />
-          <Button color="indigo" type="submit" className="mt-3">
-            Sign Up
-          </Button>
+          <Button type="submit">Sign Up</Button>
           <Typography variant="small" className="mt-3 flex justify-center">
             Already have an account?
             {/* to add a link to the LoginForm once the user has an account */}
-            <Typography
-              as="a"
-              href="#signup"
-              variant="small"
-              color="blue-gray"
-              className="ml-1 font-bold"
-            >
+            <Link to="/" className="ml-1 font-bold">
               Sign In
-            </Typography>
+            </Link>
           </Typography>
         </CardBody>
       </form>

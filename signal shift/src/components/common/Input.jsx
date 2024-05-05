@@ -1,9 +1,7 @@
-import PropTypes from "prop-types";
+import { Input as MInput } from "@material-tailwind/react";
 
 function Input(props) {
-  return <div>Input</div>;
+  return <MInput required {...props} />;
 }
-
-Input.propTypes = {};
 
 export default Input;

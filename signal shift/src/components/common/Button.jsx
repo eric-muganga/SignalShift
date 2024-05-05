@@ -1,9 +1,7 @@
-import PropTypes from "prop-types";
+import { Button as MButton } from "@material-tailwind/react";
 
 function Button(props) {
-  return <div>Button</div>;
+  return <MButton color="indigo" className="mt-3" {...props} />;
 }
-
-Button.propTypes = {};
 
 export default Button;
