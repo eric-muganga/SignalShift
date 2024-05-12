@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
-
-import { CiMenuKebab } from "react-icons/ci";
+import { CiMenuKebab }  from "react-icons/ci";
 import {
   Menu,
   MenuHandler,
