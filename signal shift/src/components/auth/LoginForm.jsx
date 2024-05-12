@@ -59,6 +59,7 @@ function LoginForm() {
             label="Email"
             placeholder="name@mail.com"
             value={userDetails.email}
+            required
             onChange={handleChange}
           />
           <Input
@@ -68,13 +69,12 @@ function LoginForm() {
             label="Password"
             value={userDetails.password}
             onChange={handleChange}
+            required
           />
           <div className="-ml-2.5">
             <Checkbox color="indigo" label="Remember Me" />
           </div>
-          <Button color="indigo" type="submit" className="mt-3">
-            Sign In
-          </Button>
+          <Button type="submit">Sign In</Button>
           <Typography variant="small" className="mt-3 flex justify-center">
             Don&apos;t have an account?
             {/* to add a link to the LoginForm once the user has an account */}

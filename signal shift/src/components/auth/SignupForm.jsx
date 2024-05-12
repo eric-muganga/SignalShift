@@ -49,7 +49,7 @@ function SignupForm() {
         className="mt-4 mb-2 grid h-12 place-items-center"
       >
         <Typography variant="h5" className="text-center">
-          Sign Up
+          Create an account
         </Typography>
       </CardHeader>
 
@@ -72,6 +72,7 @@ function SignupForm() {
             placeholder="name@mail.com"
             value={userDetails.email}
             onChange={handleChange}
+            required
           />
           <Input
             type="password"
@@ -80,8 +81,9 @@ function SignupForm() {
             label="Password"
             value={userDetails.password}
             onChange={handleChange}
+            required
           />
-          <Button type="submit">Sign Up</Button>
+          <Button type="submit">Create account</Button>
           <Typography variant="small" className="mt-3 flex justify-center">
             Already have an account?
             {/* to add a link to the LoginForm once the user has an account */}
