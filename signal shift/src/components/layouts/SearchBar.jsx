@@ -11,7 +11,7 @@ export default function SearchBar() {
           variant="standard"
           label="Search for a chat"
           size="md"
-          className="text-sm focus:outline-none text-blue-gray-900 w-full "
+          className="text-sm focus:outline-none text-blue-gray-900 w-full"
         />
       </div>
       <div className="pr-5 pl-2">

@@ -3,7 +3,8 @@ import Root from "./pages/Root";
 import LoginForm from "./components/auth/LoginForm";
 import SignupForm from "./components/auth/SignupForm";
 import Main from "./pages/Main";
-
+import { AuthProvider } from "./contexts/AuthContext";
+import Onboarding from "./pages/Onboarding";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         element: <SignupForm />,
       },
       {
+        path: "/onboarding/:userId",
+        element: <Onboarding />,
+      },
+      {
         path: "main",
         element: <Main />,
       },
@@ -26,7 +31,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  );
 }
 
 export default App;
