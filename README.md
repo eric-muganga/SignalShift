@@ -44,5 +44,5 @@ This is a real-time chat application built using React, Firebase, and Redux. It 
 
 1. **Clone the repository:**
    ```sh
-   git clone [https://github.com/your-username/chat-app.git](https://github.com/eric-muganga/SignalShift.git)
+   git clone https://github.com/your-username/chat-app.git
    cd chat-app
