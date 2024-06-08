@@ -2,7 +2,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./pages/Root";
 import LoginForm from "./components/auth/LoginForm";
 import SignupForm from "./components/auth/SignupForm";
-import Main from "./pages/Main";
+import Main, { userLoader } from "./pages/Main";
+import { Provider } from "react-redux";
+import store from "./store/store";
+//import { generateRandomUsers } from "./utils/addRandomContacts";
 
 const router = createBrowserRouter([
   {
@@ -20,13 +23,20 @@ const router = createBrowserRouter([
       {
         path: "main",
         element: <Main />,
+        loader: () => userLoader(store),
       },
     ],
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  //generateRandomUsers(10);
+  //const dispatch = useDispatch();
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />;
+    </Provider>
+  );
 }
 
 export default App;
