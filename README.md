@@ -39,3 +39,10 @@ This is a real-time chat application built using React, Firebase, and Redux. It 
 - `react-icons`: For iconography
 - `emoji-picker-react`: For emoji selection
 - `wavesurfer.js`: For audio waveform visualization
+
+## Getting Started
+
+1. **Clone the repository:**
+   ```sh
+   git clone [https://github.com/your-username/chat-app.git](https://github.com/eric-muganga/SignalShift.git)
+   cd chat-app
