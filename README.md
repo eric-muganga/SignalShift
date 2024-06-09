@@ -44,5 +44,22 @@ This is a real-time chat application built using React, Firebase, and Redux. It 
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/chat-app.git
-   cd chat-app
+   git clone [https://github.com/your-username/chat-app.git](https://github.com/eric-muganga/SignalShift.git)
+   cd SignalShit
+
+2. **Install dependencies:**
+   ```sh
+   npm install
+
+3. **Create a .env file in the root directory and add your Firebase configuration:**
+   ```plaintext
+   VITE_API_KEY=your-api-key
+   VITE_AUTH_DOMAIN=your-auth-domain
+   VITE_PROJECT_ID=your-project-id
+   VITE_STORAGE_BUCKET=your-storage-bucket
+   VITE_MESSAGING_SENDER_ID=your-messaging-sender-id
+   VITE_APP_ID=your-app-id
+
+4. **Run the application:**
+   ```sh
+   npm run dev
