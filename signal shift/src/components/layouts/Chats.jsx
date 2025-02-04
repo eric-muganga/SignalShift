@@ -103,8 +103,8 @@ export default function Chats() {
   }, [currentUser]);
 
   // Filter chats based on search term
-  const filteredChats = chats.filter((chat) =>
-    chat.user.displayName.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredChats = chats?.filter((chat) =>
+    chat.user.displayName?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   console.log(filteredChats);
