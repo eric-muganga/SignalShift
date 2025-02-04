@@ -11,7 +11,6 @@ import { selectMessageSearch } from "../store/uiSlice";
 import SearchMessages from "../components/chat/SearchMessages";
 
 function Main() {
-  //const authLoading = useSelector(selectAuthLoading);
   const currentUser = useLoaderData();
   const currentChatUser = useSelector(selectCurrentChatUser);
   const userProfile = useSelector(selectUserProfile);
@@ -27,13 +26,15 @@ function Main() {
 
   console.log("currentUser: ", currentUser);
   console.log("userProfile: ", userProfile);
+
   return (
-    <div className="grid grid-cols-main h-screen w-screen max-h-screen max-w-full overflow-hidden">
+    <div className="grid lg:grid-cols-main h-screen w-screen max-h-screen max-w-full overflow-hidden">
       <ChatsList />
       {currentChatUser ? (
-        <div className={messageSearch ? "grid grid-cols-2" : "grid-cols-2"}>
+        <div
+          className={`${messageSearch ? " grid grid-cols-2 " : "grid-cols-2"}`}
+        >
           <ChatWindow />
-
           {messageSearch && <SearchMessages />}
         </div>
       ) : (
