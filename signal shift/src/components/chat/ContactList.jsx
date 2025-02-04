@@ -50,8 +50,8 @@ function ContactList() {
     getContacts();
   }, [currentUser.id]);
 
-  const filteredContacts = allContacts.filter((contact) =>
-    contact.displayName.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredContacts = allContacts?.filter((contact) =>
+    contact.displayName?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const groupedContacts = groupContactsAlphabetically(filteredContacts);
