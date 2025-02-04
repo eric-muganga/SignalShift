@@ -58,58 +58,60 @@ function LoginForm() {
   }
 
   return (
-    <div className="flex justify-center items-center">
-      <Card className="w-72 m-24">
-        <CardHeader
-          variant="gradient"
-          className=" mt-4 mb-2 grid h-12 place-items-center"
-        >
-          <Typography variant="h5" className="text-center">
-            Sign In
-          </Typography>
+    <div className="flex justify-center items-center h-screen">
+      <div>
+        <Card className="w-72 m-24">
+          <CardHeader
+            variant="gradient"
+            className=" mt-4 mb-2 grid h-12 place-items-center"
+          >
+            <Typography variant="h5" className="text-center">
+              Sign In
+            </Typography>
 
-          {error && (
-            <Typography variant="small" color="red" className="mb-4">
-              {error}
-            </Typography>
-          )}
-        </CardHeader>
-        <form onSubmit={handleLogin}>
-          <CardBody className="flex flex-col gap-2">
-            <Input
-              type="email"
-              color="indigo"
-              name="email"
-              label="Email"
-              placeholder="name@mail.com"
-              value={userDetails.email}
-              required
-              onChange={handleChange}
-            />
-            <Input
-              type="password"
-              color="indigo"
-              name="password"
-              label="Password"
-              value={userDetails.password}
-              onChange={handleChange}
-              required
-            />
-            <div className="-ml-2.5">
-              <Checkbox color="indigo" label="Remember Me" />
-            </div>
-            <Button type="submit">Sign In</Button>
-            <Typography variant="small" className="mt-3 flex justify-center">
-              Don&apos;t have an account?
-              {/* to add a link to the LoginForm once the user has an account */}
-              <Link to="signUp" className="ml-1 font-bold">
-                {" "}
-                Sign up
-              </Link>
-            </Typography>
-          </CardBody>
-        </form>
-      </Card>
+            {error && (
+              <Typography variant="small" color="red" className="mb-4">
+                {error}
+              </Typography>
+            )}
+          </CardHeader>
+          <form onSubmit={handleLogin}>
+            <CardBody className="flex flex-col gap-2">
+              <Input
+                type="email"
+                color="indigo"
+                name="email"
+                label="Email"
+                placeholder="name@mail.com"
+                value={userDetails.email}
+                required
+                onChange={handleChange}
+              />
+              <Input
+                type="password"
+                color="indigo"
+                name="password"
+                label="Password"
+                value={userDetails.password}
+                onChange={handleChange}
+                required
+              />
+              <div className="-ml-2.5">
+                <Checkbox color="indigo" label="Remember Me" />
+              </div>
+              <Button type="submit">Sign In</Button>
+              <Typography variant="small" className="mt-3 flex justify-center">
+                Don&apos;t have an account?
+                {/* to add a link to the LoginForm once the user has an account */}
+                <Link to="signUp" className="ml-1 font-bold">
+                  {" "}
+                  Sign up
+                </Link>
+              </Typography>
+            </CardBody>
+          </form>
+        </Card>
+      </div>
     </div>
   );
 }
