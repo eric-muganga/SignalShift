@@ -74,7 +74,7 @@ function SignupForm() {
   }
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center h-screen">
       <Card className="w-80 m-24">
         <CardHeader
           variant="gradient"
