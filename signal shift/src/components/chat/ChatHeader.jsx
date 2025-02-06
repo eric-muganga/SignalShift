@@ -31,7 +31,7 @@ function ChatHeader() {
   };
 
   return (
-    <div className="h-16 px-4 py-3 bg-blue-gray-50 flex justify-between items-center z-10">
+    <div className="h-20 px-4 py-3 bg-blue-gray-50 flex justify-between items-center z-10">
       <div className="flex items-center justify-center gap-6">
         <Avatar
           size="sm"
